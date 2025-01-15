@@ -74,6 +74,11 @@ else
 		egrep '^M2' Zadania\ UKOS/Kolo/$1/$2 > Praca\ inzynierska/M2.txt
 		
 		cp **/*.txt Dokumenty/Pliki\ tekstowe
+		
+		touch Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
+		head -$3 Praca\ inzynierska/SSD.txt >> Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
+		head -$3 Praca\ inzynierska/HDD.txt >> Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
+		head -$3 Praca\ inzynierska/M2.txt >> Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
 	else
 		echo "Nalezy podac 3 parametry: \"Rozwiazanie\" lub \"Tymczasowe\", nazwe pliku z rozszerzeniem i liczbe calkowita."
 	fi
