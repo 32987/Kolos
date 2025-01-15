@@ -67,6 +67,11 @@ else
 		touch Zadania\ UKOS/Kolo/$1/$2
 		echo "[Rodzaj dysku]	[Pojemność]	[Cena]" > Zadania\ UKOS/Kolo/$1/$2
 		echo "$dane" >> Zadania\ UKOS/Kolo/$1/$2
+		
+		touch Praca\ inzynierska/{SSD.txt,HDD.txt,M2.txt}
+		egrep '^SSD' Zadania\ UKOS/Kolo/$1/$2 > Praca\ inzynierska/SSD.txt
+		egrep '^HDD' Zadania\ UKOS/Kolo/$1/$2 > Praca\ inzynierska/HDD.txt
+		egrep '^M2' Zadania\ UKOS/Kolo/$1/$2 > Praca\ inzynierska/M2.txt
 	else
 		echo "Nalezy podac 3 parametry: \"Rozwiazanie\" lub \"Tymczasowe\", nazwe pliku z rozszerzeniem i liczbe calkowita."
 	fi
