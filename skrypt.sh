@@ -76,7 +76,7 @@ else
 		cp **/*.txt Dokumenty/Pliki\ tekstowe
 		
 		touch Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
-		head -$3 Praca\ inzynierska/SSD.txt >> Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
+		head -$3 Praca\ inzynierska/SSD.txt > Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
 		head -$3 Praca\ inzynierska/HDD.txt >> Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
 		head -$3 Praca\ inzynierska/M2.txt >> Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
 	else
