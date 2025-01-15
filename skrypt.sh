@@ -17,6 +17,7 @@ else
 	if [[ $1 =~ $p1regex ]] && [[ $2 =~ $p2regex ]] && [[ $3 =~ $p3regex ]]
 	then
 		touch Zadania\ UKOS/Kolo/$1/$2
+		echo "[Rodzaj dysku]	[Pojemność]	[Cena]" > Zadania\ UKOS/Kolo/$1/$2
 	else
 		echo "Nalezy podac 3 parametry: \"Rozwiazanie\" lub \"Tymczasowe\", nazwe pliku z rozszerzeniem i liczbe calkowita."
 	fi
