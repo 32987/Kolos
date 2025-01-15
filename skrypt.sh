@@ -57,6 +57,9 @@ p1regex="^(Rozwiazanie|Tymczasowe)$"
 p2regex="^.+\..+$"
 p3regex="^[+-]?[0-9]+$"
 
+nazwa=`whoami`
+data=`date +%Y-%m-%d`
+
 
 if [ $# != 3 ]
 then
@@ -79,6 +82,8 @@ else
 		head -$3 Praca\ inzynierska/SSD.txt > Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
 		head -$3 Praca\ inzynierska/HDD.txt >> Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
 		head -$3 Praca\ inzynierska/M2.txt >> Dokumenty/Pliki\ tekstowe/Wybrane\ dyski.txt
+		
+		tar -cvzf Kolokwium_${nazwa}_${data}.tar.gz ../Kolokwium
 	else
 		echo "Nalezy podac 3 parametry: \"Rozwiazanie\" lub \"Tymczasowe\", nazwe pliku z rozszerzeniem i liczbe calkowita."
 	fi
